@@ -12,7 +12,12 @@ const SearchInputField = () => {
   })
   return (
     <div style={{width:`${width}px`}} className='search-container'>
-     {isSearching ? <input type="text" style={{width:`93%`}} />:''}
+     {isSearching ? 
+      <input 
+      type="text"
+      autoFocus 
+      placeholder={'Enter your search word here'} />:''
+      }
      {isSearching ?
       <FaTimes className='icon' onClick={()=>setSearch(false)}/>:
       <FaSearch className='icon' onClick={()=>setSearch(true)}/>}
