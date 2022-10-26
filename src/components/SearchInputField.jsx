@@ -4,12 +4,13 @@ import {FaTimes} from 'react-icons/fa';
 import { useState,useEffect } from 'react';
 const SearchInputField = () => {
   const [isSearching,setSearch]=useState(false)
-  const [width,setWidth]=useState(20)
+  const [width,setWidth]=useState(30)
+  
   useEffect(()=>{
     if(isSearching){
         setWidth(400)
     }else setWidth(30)
-  })
+  },[width,isSearching])
   return (
     <div style={{width:`${width}px`}} className='search-container'>
      {isSearching ? 
