@@ -1,25 +1,35 @@
 
 import { useState } from 'react';
 import './App.css';
-import {Button, display, Header, Text, View} from './components/shared/components';
+import {Button, display, Header, IconsContainer, Text, View} from './components/shared/components';
 import SearchInputField from './components/SearchInputField'
 import InputField from './components/InputField'
 import { Style } from './components/shared/components';
+import { Icons } from './utils/iconsList';
+import { Cart } from './components/Cart';
+import {FaShoppingCart} from 'react-icons/fa'
+import Selector from './components/Selector';
 function App() {
+
   return (
-    <View width={'100%'} height={'100vh'}>
-      <Header textColor='#121212'>
-       <div>Logo</div>
-        <SearchInputField/>
-        <ul>
-        <li>Home</li>
-        <li>Home</li>
-        <li>Home</li>
-        </ul>
+  <View width={'100%'} height={'100vh'}>
+    <Header textColor='#121212'>
+      
+      <div>Logo</div>
+      <Cart/>
+      <SearchInputField/>
+         {
+          Icons.map(data=>
+            <IconsContainer width={'150px'} style={{border:'none',gap:'10px'}}>
+             {data.icons}
+            <Text color={'#121212'}>{data.title}</Text>
+          </IconsContainer>)
+         }
       </Header>
+    
     <View 
      width={'100%'} 
-     color={'red'} 
+     color={'white'} 
      height={'960px'} 
      style={display}>
      <View 
@@ -28,6 +38,7 @@ function App() {
       style={Style}
       width={'350px'}
       height={'350px'}
+       flexDirection={'column'}
       >
       <Text color={'white'} fontSize={'16px'}>LogIn</Text>
       <InputField 
@@ -47,8 +58,9 @@ function App() {
         width={'200px'} 
         height={'35px'} >Hello</Button>
      </View>
-   
+  <Selector/>
    </View>
+    
 </View>
   );
 }

@@ -7,7 +7,7 @@ width:${props=>props.width?props.width:'300px'};
 color:${props=>props.textColor?props.textColor:'white'};
 box-shadow:0px 0px 4px 3px #1212123a;
 display:flex;
-flex-direction:column;
+flex-direction:${props=>props.flexDirection?props.flexDirection:'row'};;
 `
 
 export const Header = styled.nav`
@@ -21,6 +21,8 @@ color:${props=>props.textColor?props.textColor:'white'};
 justify-content:${props=>props.justify?props.justify:'space-between'};
 box-shadow:0px 0px 4px 3px #1212123a;
 `
+
+
 export const Text=styled.p`
 font-size:${props=>props.fontSize?props.fontSize:'16px'};
 color:${props=>props.color?props.color:'white'};;
@@ -38,6 +40,8 @@ font-weight:bolder;
 color:white;
 margin-top:20px;
 `
+
+
 export const Style={
  marginTop:"70px",
  backgroundColor:"#121212",
@@ -47,9 +51,60 @@ export const Style={
  borderRadius:'5px'
 }
 
+
 export const display={
  display:"flex",
  flexDirection:"row",
  gap:"30px",
- 
+}
+
+
+
+
+export const IconsContainer=styled.div`
+width:${props=>props.width?props.width:'40px'};
+height:${props=>props.height?props.height:'40px'};
+background-Color:white;
+display:flex;
+align-items:center;
+justify-content:flex-start;
+color:#121212;
+cursor:pointer;
+border:solid 1px  #12121241;
+
+&:hover{
+    background-color:#19e5ecb2
+}
+
+`
+
+export const Before=styled.div`
+
+&:before{
+    content:attr(title);
+    width:20px;
+    height:20px;
+    background-Color:red;
+    color:white;
+    font-weight:bolder;
+    display:flex;
+    justify-content:center;
+    align-item:center;
+    border-Radius:100%;
+    z-index:200;
+    position:absolute;
+    margin-left:5px;
+    margin-top:-25px;
+};
+`
+
+export const Image=styled.img`
+position:absolute;
+width:${props=>props.width?props.width:'40px'};
+height:${props=>props.height?props.height:'40px'};
+`
+export const IconStyle={
+marginLeft:'30px',
+width:'20px',
+height:'20px'
 }
