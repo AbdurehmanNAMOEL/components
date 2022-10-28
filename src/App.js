@@ -13,8 +13,8 @@ function App() {
 
   return (
   <View width={'100%'} height={'100vh'}>
-    <Header textColor='#121212'>
-      
+ <Header textColor='#121212'>
+      <Selector/>
       <div>Logo</div>
       <Cart/>
       <SearchInputField/>
@@ -57,10 +57,10 @@ function App() {
        <Button 
         width={'200px'} 
         height={'35px'} >Hello</Button>
-     </View>
-  <Selector/>
+     </View> 
+   
    </View>
-    
+   
 </View>
   );
 }

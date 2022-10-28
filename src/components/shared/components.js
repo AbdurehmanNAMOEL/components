@@ -105,6 +105,6 @@ height:${props=>props.height?props.height:'40px'};
 `
 export const IconStyle={
 marginLeft:'30px',
-width:'20px',
-height:'20px'
+width:'15px',
+height:'15px'
 }

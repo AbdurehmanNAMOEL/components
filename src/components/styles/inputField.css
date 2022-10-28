@@ -2,7 +2,12 @@
     height: 70px;
     display: flex;
     flex-direction: column;
-    justify-content: center;  
+    justify-content: center;
+    transform: rotateX('angle');
+    -webkit-transform: rotateX('angle');
+    -moz-transform: rotateX('angle');
+    -ms-transform: rotateX('angle');
+    -o-transform: rotateX('angle');
 }
  .input-field-Container input{
     width: 98%;
