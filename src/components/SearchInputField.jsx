@@ -12,7 +12,7 @@ const SearchInputField = () => {
     }else setWidth(30)
   },[width,isSearching])
   return (
-    <div style={{width:`${width}px`}} className='search-container'>
+    <div style={{width:`${width}px`,transition:'all 0.5s'}} className='search-container'>
      {isSearching ? 
       <input 
       type="text"

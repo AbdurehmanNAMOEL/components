@@ -34,15 +34,15 @@ const handleListClicked=(e)=>{
     }}
     flexDirection={'column'}
     >
-    {opition.map(data=>
-    <IconsContainer 
-    width={'200px'} 
-    style={{border:'none',gap:'20px',borderRadius:'20px'}}
-    onClick={handleList}
+    { opition.map(data=>
+      <IconsContainer 
+      width={'200px'} 
+      style={{border:'none',gap:'20px',borderRadius:'20px'}}
+      onClick={handleList}
     >
     {data?.icons}
     <Text color='#121212'>{data.title?data.title:'List'}</Text>
-    <FaGreaterThan style={{transform:`rotateZ(${isListed?90:270}deg)`,color:'#12121273'}}/>
+    
     </IconsContainer>)}
     <View 
      width={'auto'} 
@@ -61,7 +61,17 @@ const handleListClicked=(e)=>{
             <Text color={'#121212'}>{data.title}</Text>
           </IconsContainer>)
   }
+
   </View>
+    <FaGreaterThan 
+    style={{
+        transform:`rotateZ(${isListed?90:270}deg)`,
+        color:'#12121273',
+        height:'10px',
+        position:'absolute',
+        marginTop:'16px',
+        marginLeft:'150px'
+        }}/>
     </View>
   )
 }
