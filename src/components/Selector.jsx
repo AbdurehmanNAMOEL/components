@@ -7,18 +7,17 @@ import {IconStyle }from './shared/components'
 
 const Selector = () => {
   const [isListed,setList] = useState(false)
-  const [angle,setAngle]=useState(270)
   const [opition,setOpition] =useState([{"title":"All","icons":<FaBars style={IconStyle}/>}])
 
-const handleList=()=>{
+  const handleList=()=>{
     setList(!isListed)
-    setAngle(90)
-}
+ 
+  }
 
-const handleListClicked=(e)=>{
- setOpition(Icons.filter(item=>item.title === e.target.outerText))
- setList(false)
-}
+  const handleListClicked=(e)=>{
+   setOpition(Icons.filter(item=>item.title === e.target.outerText))
+   setList(false)
+  }
 
 
   return (

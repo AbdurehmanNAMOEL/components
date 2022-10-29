@@ -6,4 +6,8 @@ export const Icons=[
     {"title":"AboutUs","icons":<FaUserFriends style={IconStyle}/>},
     {"title":"shopping","icons":<FaShoppingCart style={IconStyle}/>},
     {"title":"ContactUs","icons":<FaShoppingCart style={IconStyle}/>},
+     {"title":"a","icons":<FaHome style={IconStyle}/>},
+    {"title":"b","icons":<FaUserFriends style={IconStyle}/>},
+    {"title":"c","icons":<FaShoppingCart style={IconStyle}/>},
+    {"title":"d","icons":<FaShoppingCart style={IconStyle}/>},
 ]

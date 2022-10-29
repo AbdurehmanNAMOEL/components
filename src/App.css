@@ -9,3 +9,236 @@ li{
     flex-direction: row;
     gap: 20px;
 }
+
+.container{
+    width: 400px;
+    height: 600px;
+    background-color: rgb(19, 19, 20);
+    box-shadow: 3px 3px 8px  rgb(10, 10, 10),-3px -3px 3px rgba(245, 245, 245, 0.185) ;
+    margin-left: 200px;
+    margin-top: 20px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.icon1{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(19, 19, 20);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-shadow: inset 10px 10px 10px  rgba(2, 2, 3, 0.89),
+    inset -10px -10px 10px  rgba(25, 25, 26, 0.89);
+}
+
+.icon5{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(19, 19, 20);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: inset 10px 10px 10px  rgba(2, 2, 3, 0.89),
+    inset -10px -10px 10px  rgba(25, 25, 26, 0.89),
+    3px 3px 3px black , -1px -1px 1px rgba(255, 255, 255, 0.034);
+}
+.input{
+    width: 200px;
+    height:20px;
+    border: none;
+    outline: none;
+    padding: 10px 10px 20px 5px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 10px 10px 10px  rgba(2, 2, 3, 0.89),
+    inset -10px -10px 10px  rgba(25, 25, 26, 0.89);
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.bar{
+    width: 160px;
+    height: 25px;
+    margin-top: 10px;
+    background-color: orange;
+    border-radius: 15px 0px 0px 15px;
+    -webkit-border-radius: 15px 0px 0px 15px;
+    -moz-border-radius: 15px 0px 0px 15px;
+    -ms-border-radius: 15px 0px 0px 15px;
+    -o-border-radius: 15px 0px 0px 15px;
+}
+
+.btn1{
+    width: 50px;
+    height: 50px;
+    box-shadow: 3px 3px 3px black , -1px -1px 1px rgba(255, 255, 255, 0.26);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    cursor: pointer;
+   
+}
+
+.btn2{
+    width: 50px;
+    height: 50px;
+    box-shadow: 3px 3px 3px black , -1px -1px 1px rgba(255, 255, 255, 0.26);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    cursor: pointer;
+}
+
+
+.btn4{
+    width: 120px;
+    height: 120px;
+    box-shadow: 3px 3px 3px black , 
+    -1px -1px 1px rgba(255, 255, 255, 0.26),
+    inset 20px 20px 20px rgba(20, 20, 20, 0.692),inset -10px -10px 10px rgba(17, 17, 17, 0.692) ;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    cursor: pointer;
+}
+
+
+.icon2{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(19, 19, 20);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px rgba(0, 0, 0, 0.411);
+    color: aqua;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-shadow: inset 10px 10px 10px  rgba(2, 2, 3, 0.89),
+    inset -10px -10px 10px  rgba(25, 25, 26, 0.89);
+}
+
+
+
+.icon3{
+    width: 170px;
+    height: 170px;
+    background-color: rgb(19, 19, 20);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px rgba(0, 0, 0, 0.411);
+    color: aqua;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-shadow: inset 10px 10px 10px  rgba(2, 2, 3, 0.89),
+    inset -10px -10px 10px  rgba(25, 25, 26, 0.89);
+}
+.btn1:hover{
+    background-color: #121212;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.range-input-container{
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin-top: 200px;
+}
+input{
+    -webkit-appearance: none;
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    outline: none;
+    background-color: purple;
+}
+.value-display{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 100;
+    border-radius: 80px 80px 500px 500px;
+    -webkit-border-radius: 80px 80px 500px 500px;
+    -moz-border-radius: 80px 80px 500px 500px;
+    -ms-border-radius: 80px 80px 500px 500px;
+    -o-border-radius: 80px 80px 500px 500px;
+    background-color: blueviolet;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px;
+}
+.range-input-container input::-webkit-slider-thumb{
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: blueviolet;
+}
+
