@@ -6,7 +6,7 @@ height:${props=>props.height?props.height:'300px'};
 width:${props=>props.width?props.width:'300px'};
 color:${props=>props.textColor?props.textColor:'white'};
 box-shadow:0px 0px 4px 3px #1212123a;
-display:flex;
+display:${props=>props.display?props.display:'flex'};
 flex-direction:${props=>props.flexDirection?props.flexDirection:'row'};;
 `
 
@@ -106,5 +106,24 @@ height:${props=>props.height?props.height:'40px'};
 export const IconStyle={
 marginLeft:'30px',
 width:'15px',
-height:'15px'
+height:'15px',
+color:'#121212'
 }
+
+
+
+export const ClayButton=styled(View)`
+    width: ${props=>props.width?props.width:'50px'};
+    height: ${props=>props.height?props.height:'50px'};
+    box-shadow: 3px 3px 3px black , 
+    -1px -1px 1px rgba(255, 255, 255, 0.26),
+    inset 20px 20px 20px rgba(20, 20, 20, 0.692),
+    inset -10px -10px 10px rgba(17, 17, 17, 0.692) ;
+    border-radius: 10px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: aqua;
+    cursor: pointer;
+ 
+    `

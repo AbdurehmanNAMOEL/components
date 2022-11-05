@@ -1,0 +1,35 @@
+.cal-container{
+    width:400px;
+    height:540px;
+    margin-top:70px;
+    display:flex;
+    flex-direction:column;
+    border: solid 10px orange;
+    border-Radius:10px;
+    box-shadow: 3px 3px 8px  rgb(10, 10, 10),-3px -3px 3px rgba(245, 245, 245, 0.185);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.button-container{
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px;
+    grid-template-rows: 60px 60px 60px 60px;
+    place-content: center;
+    grid-gap: 20px;
+}
+.val-display{
+    box-shadow: inset 10px 10px 10px #121212;
+    border-Radius:10px 10px 0px 0px;
+}
+
+.clay-btn:hover{
+    background-color: orange;
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}

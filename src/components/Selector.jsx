@@ -29,7 +29,8 @@ const Selector = () => {
         transition:'all 0.5s',
         boxShadow:'none',
         border:'solid 2px #1212123f',
-        borderRadius:'20px'
+        borderRadius:'20px',
+        color:'#121212'
     }}
     flexDirection={'column'}
     >

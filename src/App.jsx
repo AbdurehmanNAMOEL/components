@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import {Button, display, Header, IconsContainer, Text, View} from './components/shared/components';
 import SearchInputField from './components/SearchInputField'
@@ -9,26 +9,101 @@ import { Icons } from './utils/iconsList';
 import { Cart } from './components/Cart';
 import {FaShoppingCart,FaHome,FaWheelchair, FaAmazon, FaAngular} from 'react-icons/fa'
 import Selector from './components/Selector';
-
+import ClayCalculator from './components/ClayCalculator';
+import AnimatedNavBar from './components/AnimatedNavBar';
+ let radius=0
 function App() {
   const [range,setRange] = useState(0)
+  const [width,setWidth] = useState(0)
+  const [height,setHeight] = useState(0)
+  let [count,setCount] = useState(470)
+  const [angle,setAngle]=useState(0)
+  const [bgColor,setBgColor]=useState('white')
+ 
 
-  return (
-  <View width={'100%'} height={'100vh'} style={{display:'flex',gap:'20px'}}>
- {/* <Header textColor='#121212'> */}
-      {/* <Selector/>
-  
-      {/* <Cart/> */}
-      {/* <SearchInputField/> */}
-         {
-          // Icons.map(data=>
-          //   <IconsContainer width={'150px'} style={{border:'none',gap:'10px'}}>
-          //    {data.icons}
-          //   <Text color={'#121212'}>{data.title}</Text>
-          // </IconsContainer>)
-         }
-      {/* </Header> */} 
+  const handleRadial=(e)=>{
+    console.log(e.clientY,e.clientX);
+    if(e.clientY>=295 && e.clientX===399) {
+      setAngle(0)
+      setCount(470)
+     }else if(e.clientY===297 || e.clientX===411){
+      setAngle(10)
+      setCount(452)
+    }else if(e.clientY===303 || e.clientX===421){
+      setAngle(20)
+      setCount(432)
+    }else if(e.clientY===308 || e.clientX===434 ){
+      setAngle(30)
+      setCount(422)
+    }else if(e.clientY===321 || e.clientX===447 ){
+      setAngle(50)
+      setCount(412)
+    }else if(e.clientY===333 || e.clientX===453 ){
+      setAngle(70)
+      setCount(392)
+    }else if(e.clientY===352 || e.clientX===456 ){
+      setAngle(90)
+      setCount(365)
+    }
+     
     
+      
+    //  setInterval(()=>{
+    //    if(count>=12){
+    //     setCount(count=count-10)}
+    
+    // },500)
+  
+  }
+
+
+  const handleMouse=(e)=>{
+    console.log('hello');
+    setAngle(e.target.value)
+   
+  }
+  
+  var time;
+  const handleInterval=()=>{
+  if(radius<4000){
+    console.log(radius);
+    time=setInterval(handleBbColor,100)
+  }else if(radius>4000){
+      clearInterval(time)
+      radius=0;
+      setWidth(0)
+      setHeight(0)
+    }
+  }
+  const handleBbColor=()=>{
+     setWidth(radius)
+     setHeight(radius) 
+    radius+=200
+  }
+ 
+ useEffect(()=>{
+  if(radius===3200){
+  if(bgColor==='#121212'){
+      setBgColor('white')
+    }else setBgColor('#121212')
+  }
+ },[radius])
+  return (
+  <View width={'100%'} height={'100vh'} style={{display:'flex',gap:'20px',overflow:'hidden'}} color={bgColor}>
+ {/* <Header textColor='#121212'>
+     <Selector/>
+  
+      <Cart/>
+      <SearchInputField/>
+         {
+          Icons.map(data=>
+            <IconsContainer width={'150px'} style={{border:'none',gap:'10px'}}>
+             {data.icons}
+            <Text color={'#121212'}>{data.title}</Text>
+          </IconsContainer>)
+         }
+     </Header>
+     */}
     {/* <View 
      width={'100%'} 
      color={'white'} 
@@ -98,14 +173,28 @@ function App() {
     
       <div className='icon3'>
      <div className='icon2'>
-      <div className='btn4'>B</div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+         <defs>
+            <linearGradient id="GradientColor">
+               <stop offset="0%" stop-color="#e91e63" />
+               <stop offset="100%" stop-color="#673ab7" />
+            </linearGradient>
+         </defs>
+         <circle cx="80" cy="80" r="70" stroke-linecap="round" style={{strokeDasharray:'472',strokeDashoffset:`${count}`}}>
+          
+         </circle>
+ </svg>
+<div onMouseMove={handleRadial} className='btn4'>
+  <div className="radius" style={{transform:`rotateZ(${angle}deg)`}}></div>
+</div>
+      
      </div>
      </div>
      <div className='input'>
       <div className='bar'></div>
      </div>
       <div className='icon5'>F</div>
-   </div> */}
+   </div> 
    <div className="range-input-container">
     
   <input  
@@ -117,6 +206,37 @@ function App() {
      style={{marginLeft: `${range}px`,display:`${range> 0 ?'flex':'none'}`}}>{range}</div>
    </div>
  
+
+
+  <div className="circle" 
+  style={{height:`${height}px`,width:`${width}px`,backgroundColor:'orange',borderRadius:'10px'}}>
+    
+  </div>
+
+  <ClayCalculator/>
+
+  <AnimatedNavBar/> */}
+  <View 
+   className='background-convertor'
+   width={`${width}px`} 
+   height={`${height}px`} 
+   
+   style={
+  {
+    position:'absolute',
+    zIndex:10,
+    borderRadius:'100%',
+    marginLeft:`-${width/2}px`,
+    marginTop:`-${width/2}px`,
+    backgroundColor:`${bgColor==='#121212'?'white':"#121212"}`,
+    display:`${width>=3000?'none':'block'}`
+  
+  }} 
+   />
+    <IconsContainer onClick={handleInterval} style={{justifyContent:'center',borderRadius:'100%',zIndex:200}}>
+     <FaShoppingCart/>
+    </IconsContainer>
+<div style={{width:'200px',height:'300px',border:'solid 1px black',backgroundColor:bgColor,color:`${bgColor==='#121212'?'white':"#121212"}`}}>hello</div>
 </View>
   );
 }

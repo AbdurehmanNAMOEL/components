@@ -12,11 +12,11 @@ li{
 
 .container{
     width: 400px;
-    height: 600px;
+    height: 550px;
     background-color: rgb(19, 19, 20);
     box-shadow: 3px 3px 8px  rgb(10, 10, 10),-3px -3px 3px rgba(245, 245, 245, 0.185) ;
     margin-left: 200px;
-    margin-top: 20px;
+    margin-top: 70px;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -143,9 +143,10 @@ li{
     -o-border-radius: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+  
     color: aqua;
     cursor: pointer;
+    position: absolute;
 }
 
 
@@ -212,7 +213,7 @@ li{
     -o-border-radius: 20px;
     margin-top: 200px;
 }
-input{
+.range-input-container input{
     -webkit-appearance: none;
     position: absolute;
     width: 200px;
@@ -242,3 +243,41 @@ input{
     background-color: blueviolet;
 }
 
+circle{
+    fill: none;
+    stroke: cyan;
+    stroke-width: 10px;
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+   
+}
+circle svg{
+     color: white;
+     position: absolute;
+     transform: rotateZ(-90deg);
+     -webkit-transform: rotateZ(-90deg);
+     -moz-transform: rotateZ(-90deg);
+     -ms-transform: rotateZ(-90deg);
+     -o-transform: rotateZ(-90deg);
+}
+.radius{
+    height: 50%;
+    width: 5px;
+    background-color: cyan;
+    transform-origin: bottom;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+.background-convertor{
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
