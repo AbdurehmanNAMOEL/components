@@ -5,12 +5,15 @@ import {Button, display, Header, IconsContainer, Text, View} from './components/
 import SearchInputField from './components/SearchInputField'
 import InputField from './components/InputField'
 import { Style } from './components/shared/components';
-import { Icons } from './utils/iconsList';
+import { cardData, Icons, Icons2 } from './utils/iconsList';
 import { Cart } from './components/Cart';
 import {FaShoppingCart,FaHome,FaWheelchair, FaAmazon, FaAngular} from 'react-icons/fa'
 import Selector from './components/Selector';
 import ClayCalculator from './components/ClayCalculator';
 import AnimatedNavBar from './components/AnimatedNavBar';
+import { SideBar } from './components/SideBar';
+import earth from './assets/shortVideos/earth.mp4'
+import Card from './components/Card';
  let radius=0
 function App() {
   const [range,setRange] = useState(0)
@@ -89,21 +92,21 @@ function App() {
   }
  },[radius])
   return (
-  <View width={'100%'} height={'100vh'} style={{display:'flex',gap:'20px',overflow:'hidden'}} color={bgColor}>
- {/* <Header textColor='#121212'>
-     <Selector/>
-  
-      <Cart/>
-      <SearchInputField/>
+  <View width={'100%'} height={'200vh'} style={{display:'flex',gap:'20px',zIndex:1000}} color={bgColor}>
+   <Header textColor='#121212'>
+      <Text fontSize={'xx-large'} color={'#121212'} className='logo'>Ethio<em>Graphics</em></Text>
+        <Selector style={{border:"none"}}/>
+      {/* <SearchInputField/> */}
          {
-          Icons.map(data=>
+          Icons2.map(data=>
             <IconsContainer width={'150px'} style={{border:'none',gap:'10px'}}>
              {data.icons}
             <Text color={'#121212'}>{data.title}</Text>
           </IconsContainer>)
          }
+         <Cart/>
      </Header>
-     */}
+   
     {/* <View 
      width={'100%'} 
      color={'white'} 
@@ -233,10 +236,39 @@ function App() {
   
   }} 
    />
-    <IconsContainer onClick={handleInterval} style={{justifyContent:'center',borderRadius:'100%',zIndex:200}}>
+    <IconsContainer 
+      onClick={handleInterval} 
+      style={
+        {
+          justifyContent:'center',
+          borderRadius:'100%',
+          zIndex:200,
+          marginTop:'600px',
+          position:'fixed'
+        }}>
      <FaShoppingCart/>
     </IconsContainer>
-<div style={{width:'200px',height:'300px',border:'solid 1px black',backgroundColor:bgColor,color:`${bgColor==='#121212'?'white':"#121212"}`}}>hello</div>
+<View width='50px' style={{marginTop:'100px',marginLeft:'10px',position:'fixed'}}>
+<SideBar className='nav-bar' bgColor={bgColor}/>
+</View>
+
+{/* <SideBar bgColor={bgColor}/>
+<SideBar/> */}
+
+
+<div className='bg-card-container'>
+{
+  cardData.map(data=>
+  <Card 
+   bgColor={bgColor}
+   key={data.id}
+   videoSource={data.src}
+   title={data.title}
+   id={data.id}
+   />
+  )
+}
+</div>
 </View>
   );
 }

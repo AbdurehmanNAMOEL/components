@@ -1,0 +1,99 @@
+.card-container{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-top: 200px;
+    
+}
+
+.card-top{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 350px;
+    height: 238px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    opacity: 0;
+   
+}
+.card-top:hover{
+    opacity: 1;
+    background-image: linear-gradient(to top,#121212c2,#12121265,#12121265);
+    transition: all 0.7s;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}
+.title{
+    width: 150px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    font-size: x-large;
+    color: white;
+}
+.bottom-display{
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #121212;
+  
+}
+#video{
+    width: 350px;
+    height: 250px;
+    position: sticky;
+    border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -ms-border-radius: 10px 10px 0px 0px;
+    -o-border-radius: 10px 10px 0px 0px;
+}
+video {
+  object-fit: cover;
+}
+.designer-label{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #121212;
+}
+.designer{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.designer-name{
+    margin-left: -30px;
+    font-weight: bolder;
+    
+}
+.like,.seen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    color: #121212;
+}
+.icon:hover{
+    transition: all 0.7s;
+    color: orange;
+    -webkit-transition: all 0.7s;
+    -moz-transition: all 0.7s;
+    -ms-transition: all 0.7s;
+    -o-transition: all 0.7s;
+}

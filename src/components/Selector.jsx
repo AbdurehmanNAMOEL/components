@@ -1,6 +1,6 @@
 import React from 'react'
 import { View,IconsContainer,Text } from './shared/components'
-import { Icons } from '../utils/iconsList'
+import { Icons, Icons3 } from '../utils/iconsList'
 import {FaBars,FaGreaterThan} from 'react-icons/fa'
 import { useState } from 'react'
 import {IconStyle }from './shared/components'
@@ -50,7 +50,7 @@ const Selector = () => {
      style={{marginTop:'10px', display:`${isListed?'block':'none'}` }} 
      flexDirection={'column'}
      >
-     { Icons.map(data=>
+     { Icons3.map(data=>
             <IconsContainer 
              key={data.title}
              onClick={handleListClicked}

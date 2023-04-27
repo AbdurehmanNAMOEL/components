@@ -18,7 +18,7 @@ height:${props=>props.height?props.height:'60px'};
 position:${props=>props.position?props.position:'fixed'};
 background-Color:${props=>props.color?props.color:'white'};
 color:${props=>props.textColor?props.textColor:'white'};
-justify-content:${props=>props.justify?props.justify:'space-between'};
+justify-content:${props=>props.justify?props.justify:'space-around'};
 box-shadow:0px 0px 4px 3px #1212123a;
 `
 
@@ -64,16 +64,16 @@ export const display={
 export const IconsContainer=styled.div`
 width:${props=>props.width?props.width:'40px'};
 height:${props=>props.height?props.height:'40px'};
-background-Color:white;
+background-Color:${props=>props.color?props.color:'white'};
 display:flex;
 align-items:center;
 justify-content:flex-start;
-color:#121212;
+color:${props=>props.textColor?props.textColor:'#121212'};
 cursor:pointer;
 border:solid 1px  #12121241;
 
 &:hover{
-    background-color:#19e5ecb2
+    background-color:${props=>props.hoverColor?props.hoverColor:'#333333'};
 }
 
 `
@@ -104,10 +104,9 @@ width:${props=>props.width?props.width:'40px'};
 height:${props=>props.height?props.height:'40px'};
 `
 export const IconStyle={
-marginLeft:'30px',
 width:'15px',
 height:'15px',
-color:'#121212'
+marginLeft:'20px'
 }
 
 
